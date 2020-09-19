@@ -10,7 +10,7 @@ class ProductTypeAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     exclude = ('date_created',)
-    list_display = ('name', 'stock', 'daily_rate')
+    list_display = ('name', 'stock', 'entry_date')
 
 
 admin.site.register(ProductType, ProductTypeAdmin)
