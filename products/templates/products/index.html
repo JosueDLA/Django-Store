@@ -1,25 +1,28 @@
 {% extends 'shared/base.html' %}
+{% load static %}
 
-{% block Head %} Products {% endblock Head %}
+{% block Title %} Products {% endblock Title %}
 
 {% block Content %}
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tipo de Producto</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-
-        {% for product in products %}
-            <tbody>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <thead>
                 <tr>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.product_type }}</td>
-                    <td>{{ product.stock }}</td>
+                    <th>Nombre</th>
+                    <th>Tipo de Producto</th>
+                    <th>Stock</th>
                 </tr>
-            </tbody>
-        {% endfor %}
-    </table>
+            </thead>
+
+            {% for product in products %}
+                <tbody>
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.product_type }}</td>
+                        <td>{{ product.stock }}</td>
+                    </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock Content %}
