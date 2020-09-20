@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from .models import Product
 
@@ -11,8 +11,5 @@ def index(request):
 
 
 def detail(request, product_id):
-    try:
-        product = Product.objects.get(id=product_id)
-        return render(request, 'products/detail.html', {'product': product})
-    except Product.DoesNotExist:
-        raise Http404()
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, 'products/detail.html', {'product': product})
