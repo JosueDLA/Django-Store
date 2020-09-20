@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import Product
 
 # Create your views here.
@@ -11,5 +11,8 @@ def index(request):
 
 
 def detail(request, product_id):
-    product = Product.objects.get(id=product_id)
-    return render(request, 'products/detail.html', {'product': product})
+    try:
+        product = Product.objects.get(id=product_id)
+        return render(request, 'products/detail.html', {'product': product})
+    except Product.DoesNotExist:
+        raise Http404()
