@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.models import ProductsDAO
 from . import views
+
+product_DAO = ProductsDAO()
 
 urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls')),
+    path('api/', include(product_DAO.urls)),
 ]
