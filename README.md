@@ -1,6 +1,20 @@
 # Django Store
 
-Store Web App with Django
+Store application with CRUD funtionality, API and authenitcation.
+
+## Instalation
+
+Clone this repository 
+
+```bash
+git clone https://github.com/JosueDLA/Django-Store
+```
+
+Install requirements.txt
+
+```bash
+pip install requirements.txt
+```
 
 ## Software and Tools Used
 - Django
@@ -18,10 +32,6 @@ Setup
 ```sh
 > pipenv install pylint-django
 ```
-
-## Overview 
-
-TBD
 
 ## Commands
 
@@ -51,3 +61,7 @@ __sqlmigrate :__ _Displays SQL statements for a migration_
 ```sh
 > python manage.py sqlmigrate [App] [Migration ID]
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
