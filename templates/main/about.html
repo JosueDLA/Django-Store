@@ -1,0 +1,65 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block Title %} About {% endblock Title %}
+
+{% block Head %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
+{% endblock Head %}
+
+{% block Content %}
+<!-- About -->
+<div class="container padding">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="display-4">About Us</h1>
+            <hr />
+            <div class="col-12">
+                <p class="lead">
+                    Welcome to Store, this web page is created with Django Framework.
+                    This project includes CRUD functionality, API and authentication.
+                    Created by <a href="https://github.com/JosueDLA" target="_blank">JosueDLA</a>,
+                    Store source code is available in <a href="https://github.com/JosueDLA/Django-Store"
+                        target="_blank">GitHub</a>.
+                    Hope you like this project, if you want to
+                    contribute to this project please open an issue.
+                </p>
+                <center>
+                    <a href="https://github.com/JosueDLA/Django-Store" target="_blank">
+                        <img align="center"
+                            src="https://github-readme-stats.vercel.app/api/pin/?username=JosueDLA&repo=Django-Store" />
+                    </a>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About -->
+
+<!-- Three Column -->
+<div class="container padding">
+    <div class="row text-center padding">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <i class="fab fa-python"></i>
+            <h3>Django</h3>
+            <p>Django makes it easier to build better Web apps more quickly and with less code.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <i class="fab fa-html5"></i>
+            <h3>HTML 5</h3>
+            <p>HTML is the standard markup language for Web pages.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <i class="fas fa-bold"></i>
+            <h3>Bootstrap 4</h3>
+            <p>The world’s most popular front-end open source toolkit.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <i class="fab fa-css3"></i>
+            <h3>CSS3</h3>
+            <p>CSS is the language we use to style an HTML document.</p>
+        </div>
+    </div>
+</div>
+<!-- End Three Column -->
+{% endblock Content %}
