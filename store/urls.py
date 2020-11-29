@@ -22,6 +22,7 @@ product_DAO = ProductsDAO()
 
 urlpatterns = [
     path('', views.home),
+    path('about/', views.about),
     path('admin/', admin.site.urls),
     path('products/', include('products.urls')),
     path('api/', include(product_DAO.urls)),

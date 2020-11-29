@@ -4,271 +4,187 @@
 {% block Title %} Store {% endblock Title %}
 
 {% block Head %}
-    <link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
 {% endblock Head %}
 
 {% block Content %}
-    <!-- Carousel -->
-    <div class="container-fluid reset">
-        <div id="slides" class="carousel slide" data-ride="carousel">
-            <!-- Controls -->
-            <a class="carousel-control-prev w-auto" href="#slides" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
-                    aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next w-auto" href="#slides" role="button" data-slide="next">
-                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
-                    aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+<!-- Carousel -->
+<div class="container-fluid reset">
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <!-- Controls -->
+        <a class="carousel-control-prev w-auto" href="#slides" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle"
+                aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next w-auto" href="#slides" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle"
+                aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-targer="#slides" data-slide-to="0" class="active"></li>
-                <li data-targer="#slides" data-slide-to="1"></li>
-                <li data-targer="#slides" data-slide-to="2"></li>
-            </ul>
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-targer="#slides" data-slide-to="0" class="active"></li>
+            <li data-targer="#slides" data-slide-to="1"></li>
+            <li data-targer="#slides" data-slide-to="2"></li>
+        </ul>
 
-            <div id="carousel" class="carousel-inner" role="listbox">
+        <div id="carousel" class="carousel-inner" role="listbox">
 
-                <div class="carousel-item active">
-                    <img src="{% static 'main/img/background-1.jpg' %}" alt="Image1" class="">
-                    <div class="carousel-caption">
-                        <h1 class="display-2"> Lorem, ipsum. </h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illo!</h2>
-                        <button type="button" class="btn btn-outline-light btn-lg">Button</button>
-                        <button type="button" class="btn btn-primary btn-lg">Button</button>
-                    </div>
+            <div class="carousel-item active">
+                <img src="{% static 'main/img/background-1.jpg' %}" alt="Image1" class="">
+                <div class="carousel-caption">
+                    <h1 class="display-2"> Store </h1>
+                    <h2>Convenience with low prices.</h2>
+                    <a href="/products" type="button" class="btn btn-outline-light btn-lg">See Products</a>
                 </div>
+            </div>
 
-                <div class="carousel-item">
-                    <img src="{% static 'main/img/background-2.jpg' %}" alt="Image2" class="">
-                    <div class="carousel-caption">
-                        <h1 class="display-2"> Lorem, ipsum. </h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illo!</h2>
-                        <button type="button" class="btn btn-outline-light btn-lg">Button</button>
-                        <button type="button" class="btn btn-primary btn-lg">Button</button>
-                    </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/img/background-2.jpg' %}" alt="Image2" class="">
+                <div class="carousel-caption">
+                    <h1 class="display-2"> Store </h1>
+                    <h2>All for you!</h2>
+                    <a href="/products" type="button" class="btn btn-outline-light btn-lg">See Products</a>
                 </div>
+            </div>
 
-                <div class="carousel-item">
-                    <img src="{% static 'main/img/background-3.jpg' %}" alt="Image3" class="">
-                    <div class="carousel-caption">
-                        <h1 class="display-2"> Lorem, ipsum. </h1>
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, illo!</h2>
-                        <button type="button" class="btn btn-outline-light btn-lg">Button</button>
-                        <button type="button" class="btn btn-primary btn-lg">Button</button>
-                    </div>
+            <div class="carousel-item">
+                <img src="{% static 'main/img/background-3.jpg' %}" alt="Image3" class="">
+                <div class="carousel-caption">
+                    <h1 class="display-2"> Store </h1>
+                    <h2>At well. Spend less.</h2>
+                    <a href="/products" type="button" class="btn btn-outline-light btn-lg">See Products</a>
                 </div>
+            </div>
 
+        </div>
+    </div>
+</div>
+<!-- End Carousel -->
+
+<!-- Jumbotron -->
+<div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xl-10 col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <p class="lead"> Check out the latest products. </p>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <a class="btn btn-outline-secondary" href="/products">See Products</a>
+        </div>
+    </div>
+</div>
+<!-- End Jumbotron -->
+
+<!-- Fixed Background -->
+<hr class="my-4" />
+<figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
+        </div>
+        <!-- Two Column -->
+        <div class="container padding" style="margin-top: 6rem;">
+            <div class="row padding">
+                <div class="col-lg-6 col-md-12 text-center">
+                    <h2>We make your life easier</h2>
+                    <p>Access a world of new technology.</p>
+                    <a class="btn btn-primary mb-3" href="/products">See Products</a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="{% static 'main/img/work-1.jpg' %}" alt="Work" class="img-fluid img-max">
+                </div>
+            </div>
+        </div>
+        <!-- End Two Column -->
+    </div>
+</figure>
+<!-- End Fixed Background -->
+
+<!-- Team -->
+<div class="container-fluid padding">
+    <div class="row about text-center">
+        <div class="col-12">
+            <h1 class="display-4">Our Team</h1>
+            <hr />
+        </div>
+    </div>
+</div>
+<!-- End Team -->
+
+<!-- Cards -->
+<div class="container padding">
+    <div class="row padding text-center">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'main/img/team-1.jpg' %}" alt="Team1" class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title">Name</h4>
+                    <p class="card-text">Description.</p>
+                    <button class="btn btn-outline-secondary">Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'main/img/team-2.jpg' %}" alt="Team2" class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title">Name</h4>
+                    <p class="card-text">Description.</p>
+                    <button class="btn btn-outline-secondary">Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'main/img/team-3.jpg' %}" alt="Team3" class="card-img-top">
+                <div class="card-body">
+                    <h4 class="card-title">Name</h4>
+                    <p class="card-text">Description.</p>
+                    <button class="btn btn-outline-secondary">Profile</button>
+                </div>
             </div>
         </div>
     </div>
-    <!-- End Carousel -->
+</div>
+<!-- End Cards -->
 
-    <!-- Jumbotron -->
-    <div class="container-fluid">
-        <div class="row jumbotron">
-            <div class="col-xl-10 col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <p class="lead">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel animi natus quae cumque ea sint velit
-                    ut fuga pariatur. Ratione?
-                </p>
-            </div>
-            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <button class="btn btn-outline-secondary">Lorem.</button>
+<!-- Social -->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Social</h2>
+            <div class="col-12 social padding">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
     </div>
-    <!-- End Jumbotron -->
+</div>
+<!-- End Social -->
 
-    <!-- About -->
+<!-- Footer -->
+<footer class="bg-dark">
     <div class="container-fluid padding">
-        <div class="row text-center about">
-            <div class="col-12">
-                <h1 class="display-4">About Us</h1>
-                <hr />
-                <div class="col-12">
-                    <p class="lead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae adipisci ab optio delectus
-                        modi, ex doloribus repellat natus aliquid ducimus.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <a href="http://josuedla.github.io/">
+            <h5>&copy; JosueDLA</h5>
+        </a>
     </div>
-    <!-- End About -->
-
-    <!-- Three Column -->
-    <div class="container padding">
-        <div class="row text-center padding">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fas fa-code"></i>
-                <h3>HTML 5</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, nobis!</p>
-            </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-                <i class="fas fa-bold"></i>
-                <h3>Bootstrap 4</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ad.</p>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <i class="fab fa-css3"></i>
-                <h3>CSS3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, nihil.</p>
-            </div>
-        </div>
-    </div>
-    <!-- End Three Column -->
-
-    <!-- Fixed Background -->
-    <hr class="my-4" />
-    <figure>
-        <div class="fixed-wrap">
-            <div id="fixed">
-            </div>
-            <!-- Two Column -->
-            <div class="container padding" style="margin-top: 6rem;">
-                <div class="row padding">
-                    <div class="col-lg-6 col-md-12">
-                        <h2>New Secction</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, fugit!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illo fugiat ratione
-                            reprehenderit
-                            quod
-                            porro!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus tenetur repellat nostrum,
-                            fugit
-                            modi voluptas.</p>
-                        <button class="btn btn-primary mb-3">New Secction</button>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <img src="{% static 'main/img/work-1.jpg' %}" alt="Work" class="img-fluid img-max">
-                    </div>
-                </div>
-            </div>
-            <!-- End Two Column -->
-        </div>
-    </figure>
-    <!-- End Fixed Background -->
-
-    <!-- Team -->
-    <div class="container-fluid padding">
-        <div class="row about text-center">
-            <div class="col-12">
-                <h1 class="display-4">Our Team</h1>
-                <hr />
-            </div>
-        </div>
-    </div>
-    <!-- End Team -->
-
-    <!-- Cards -->
-    <div class="container padding">
-        <div class="row padding">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'main/img/team-1.jpg' %}" alt="Team1" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-title">Name</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, accusamus.
-                        </p>
-                        <button class="btn btn-outline-secondary">Profile</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'main/img/team-2.jpg' %}" alt="Team2" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-title">Name</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, accusamus.
-                        </p>
-                        <button class="btn btn-outline-secondary">Profile</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="{% static 'main/img/team-3.jpg' %}" alt="Team3" class="card-img-top">
-                    <div class="card-body">
-                        <h4 class="card-title">Name</h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, accusamus.
-                        </p>
-                        <button class="btn btn-outline-secondary">Profile</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Cards -->
-
-    <!-- Social -->
-    <div class="container-fluid padding">
-        <div class="row text-center padding">
-            <div class="col-12">
-                <h2>Social</h2>
-                <div class="col-12 social padding">
-                    <a href="#">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Social -->
-
-    <!-- Footer -->
-    <footer class="bg-dark">
-        <div class="container-fluid padding">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <hr class="light" />
-                    <img src="{% static 'shared/img/logo.png' %}" alt="Logo" style="width: 7rem;">
-                    <hr class="light" />
-                    <p>+502 5555-5555</p>
-                    <p>email@company.com</p>
-                    <p>Street Name</p>
-                    <p>City Name</p>
-                </div>
-                <div class="col-md-4">
-                    <hr class="light" />
-                    <h5>Schedule</h5>
-                    <hr class="light" />
-                    <p>Monday-Friday: 8am - 4pm</p>
-                    <p>Weekends: Closed</p>
-                </div>
-                <div class="col-md-4">
-                    <hr class="light" />
-                    <h5>Locations</h5>
-                    <hr class="light" />
-                    <p>Street, City</p>
-                    <p>Street, City</p>
-                    <p>Street, City</p>
-                </div>
-                <div class="col-12">
-                    <hr class="light-100" />
-                    <a href="http://josuedla.github.io/">
-                        <h5>&copy; JosueDLA</h5>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
+</footer>
+<!-- End Footer -->
 {% endblock Content %}
