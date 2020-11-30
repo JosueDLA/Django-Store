@@ -1,0 +1,10 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block Title %} Server Error(500) {% endblock Title %}
+
+{% block Content %}
+<div class="container h-75">
+    <img src="{% static 'main/img/500.svg' %}" alt="Server Error(500)" class="img-fluid mx-auto d-block mh-100">
+</div>
+{% endblock Content %}

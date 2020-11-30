@@ -13,12 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path, include
 from api.models import ProductsDAO
+from django.contrib import admin
 from . import views
+from . import settings
 
 product_DAO = ProductsDAO()
+
+handler400 = 'store.views.handler400'
+handler403 = 'store.views.handler403'
+handler404 = 'store.views.handler404'
+handler500 = 'store.views.handler500'
 
 urlpatterns = [
     path('', views.home),
@@ -27,3 +33,12 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('api/', include(product_DAO.urls)),
 ]
+
+# Show error views in debug mode
+if settings.DEBUG:
+    urlpatterns += [
+        path('400/', views.handler400),
+        path('403/', views.handler403),
+        path('404/', views.handler404),
+        path('500/', views.handler500),
+    ]

@@ -1,0 +1,10 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block Title %} Not Found(404) {% endblock Title %}
+
+{% block Content %}
+<div class="container h-75">
+    <img src="{% static 'main/img/404.svg' %}" alt="Not Found(404)" class="img-fluid mx-auto d-block mh-100">
+</div>
+{% endblock Content %}
