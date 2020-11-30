@@ -14,6 +14,7 @@ class ProductType(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
+    image = models.ImageField(blank=True, null=True, upload_to='img/')
     entry_date = models.DateField()
     stock = models.IntegerField()
     price = models.FloatField()

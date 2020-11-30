@@ -9,6 +9,9 @@
         <dd>{{ product.stock }}</dd>
         <dt>Price</dt>
         <dd>{{ product.price }}</dd>
+        <dt>Image</dt>
+        <dd><img src="{{ product.image.url }}" alt="{{ product.name }}"></dd>
+
     </dl>
 </div>
 {% endblock Content %}
