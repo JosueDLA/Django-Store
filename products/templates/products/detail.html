@@ -1,17 +1,37 @@
 {% extends 'shared/base.html' %}
+{% load static %}
+
+{% block Title %} {{ product.name }} {% endblock Title %}
+
+{% block Head %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}" />
+{% endblock Head %}
 
 {% block Content %}
 <div class="container pt-4">
-    <dl>
-        <dt>Nombre: </dt>
-        <dd>{{ product.name }}</dd>
-        <dt>Stock:</dt>
-        <dd>{{ product.stock }}</dd>
-        <dt>Price</dt>
-        <dd>{{ product.price }}</dd>
-        <dt>Image</dt>
-        <dd><img src="{{ product.image.url }}" alt="{{ product.name }}"></dd>
+    <h1>{{ product.name }}</h1>
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-4">
+            <img src="{{ product.image.url }}" class="img-thumbnail" alt="{{ product.name }}">
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-4 pl-4">
+            <dl>
+                <dt>Product Name:</dt>
+                <dd>{{ product.name }}</dd>
 
-    </dl>
+                <dt>Price:</dt>
+                <dd>{{ product.price }}</dd>
+
+                <dt>Stock</dt>
+                <dd>{{ product.stock }}</dd>
+
+                <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" class="btn btn-primary btn-lg">Add to cart</a>
+            </dl>
+        </div>
+        <div class="col-12">
+            <h2>Product Description</h2>
+            {{ product.description | safe }}
+        </div>
+    </div>
 </div>
 {% endblock Content %}
