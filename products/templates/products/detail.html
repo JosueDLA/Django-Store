@@ -10,8 +10,8 @@
 {% block Content %}
 <div class="container pt-4">
     <h1>{{ product.name }}</h1>
-    <div class="row flex-row">
-        <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-4 d-flex">
+    <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-4">
             {% if product.image.url != None %}
             <img src="{{ product.image.url }}" class="img-thumbnail mx-auto d-block" alt="{{ product.name }}">
             {% else %}

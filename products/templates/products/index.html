@@ -5,24 +5,24 @@
 
 {% block Content %}
 <div class="container pt-4">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Tipo de Producto</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-
+    <div class="row">
         {% for product in products %}
-        <tbody>
-            <tr>
-                <td><a href="{% url 'products:detail' product.id %}">{{ product.name }}</a></td>
-                <td>{{ product.product_type }}</td>
-                <td>{{ product.stock }}</td>
-            </tr>
-        </tbody>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card h-100">
+                {% if product.image.url != None %}
+                <img src="{{ product.image.url }}" class="img-thumbnail rounded h-75" alt="{{ product.name }}">
+                {% else %}
+                <img src="{% static 'shared/img/product-placeholder.jpg' %}" class="img-thumbnail rounded h-75"
+                    alt="{{ product.name }}">
+                {% endif %}
+                <div class="card-body text-center">
+                    <h4 class="card-title"><a href="{% url 'products:detail' product.id %}">{{ product.name }}</a></h4>
+                    <p class="card-text">Q. {{ product.price }}</p>
+                    <a href="{% url 'products:detail' product.id %}" class="btn btn-outline-secondary">See product</a>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </table>
+    </div>
 </div>
 {% endblock Content %}
